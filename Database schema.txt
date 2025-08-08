@@ -1,0 +1,134 @@
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+https://github.com/everythingin5mins/Azuredevopsdemo-spring/tree/Ep01-pipeline-creation
+ 
+ 
+github-> developer setting -> personal access-> generate token ->
+ 
+ 
+azure devops settings -> service connection-> github-> token->verify
+ 
+ 
+ 
+ 
+ 
+Column Name	Data Type	Description
+ 
+security_id	int	Unique identifier for each security
+
+security_name	string	        Full name of the security(Hex,TCS,...)
+
+sector	        string	        Trading symbol(eg,AAPL,INFY)
+
+isin	        string	        International Securities Identification Number
+
+exchange	string	        Name of the exchange(eg,NSE,NASDAQ)
+
+industry        string          Name of the sector(eg, IT, Healthcare, Finances)
+
+asset_class_id	int	Foreign key linking to Asset Class
+
+currency	string	        Trading currency(eg,INR, USD)
+
+country         string          country name
+
+issue_date	DATE	        Date the security was issued(date of creation of that organization)
+
+maturity_date	DATE      	only For bonds or fixed income instruments
+
+status	        string	        Active/Inactive/Delisted
+
+created_at	time,date	Record creation time
+
+updated_at	timedate	Last update time
+ 
+ 
+ 
+Column Name	Data   Type	Description
+ 
+assest_id	INT	Unique identifier for each asset class
+
+assest_class	VARCHAR	       Main category (e.g., Equity, Fixed Income, Mutual Fund)
+
+asset_description TEXT	        Description of the asset class
+
+sub_assest_class VARCHAR	Specific type (e.g., Junk Bond, Index Fund)
+
+isin             string	        International Securities Identification Number
+
+risk	         VARCHAR	Risk level (Low, Medium, High)
+
+investment_horizon VARCHAR	Time horizon (Short, Medium, Long, Any)
+
+sub_asset_description TEXT	Detailed description of the sub-asset class
+ 
+ 
+List of API calls it can possibe have 
+
+for assest table 
+
+GET /api/portfolios           → List all portfolios
+
+POST /api/portfolios          → Create new portfolio
+
+PUT /api/portfolios/{id}      → Update portfolio
+
+GET /api/portfolios/{id}      → Get portfolio details
+ 
+GET /api/themes               → List themes
+
+POST /api/themes              → Create theme
+
+GET /api/themes/{id}          → Get theme details
+ 
+POST /api/holdings            → Add security to portfolio
+
+PUT /api/holdings/{id}        → Edit holding
+
+DELETE /api/holdings/{id}     → Delete holding
+
+GET /api/holdings/{portfolioId} → Get holdings for portfolio
+ 
+GET /api/rebalance/check/{portfolioId} → Check deviation
+
+POST /api/rebalance/alert              → Trigger alert if needed
+ 
+ 
+ 
+ 
+ 
+ 
+table -> list of users (investers )  => edit/delete
+ 
+option ->create portfolio->
+ 
+Portfolio Name: Sharma Growth Fund
+ 
+Currency: INR
+ 
+Benchmark: Nifty 100
+ 
+Investment Amount: ₹50,00,000
+ 
+Rebalancing Frequency: Quarterly
+ 
+Strategy (Theme): Conservative
+ 
+-> create -> dashboard (navigate)
+ 
+ 
+table (security master)
+ 
+ 
+ 
+ 
+ 
+GitHub - everythingin5mins/Azuredevopsdemo-spring at Ep01-pipeline-creation
+CICD setup using azure devops pipeline . Contribute to everythingin5mins/Azuredevopsdemo-spring development by creating an account on GitHub.
+ 
